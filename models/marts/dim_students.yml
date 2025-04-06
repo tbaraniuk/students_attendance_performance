@@ -1,0 +1,32 @@
+version: 2
+
+models:
+  - name: dim_students
+    description: 'Combines student demographic data with overall performance metrics.'
+    columns:
+      - name: student_id
+        description: 'Unique identifier for each student.'
+        tests:
+          - unique
+          - not_null
+          - relationships:
+              to: ref('stg_students')
+              field: student_id
+
+      - name: full_name
+        description: 'Full name of the student.'
+
+      - name: birth_date
+        description: 'Date of birth of the student.'
+
+      - name: grade_level
+        description: 'Current grade level of the student.'
+
+      - name: emergency_contant
+        description: 'Emergency contact information for the student.'
+
+      - name: mean_exam_score
+        description: 'Average exam score of the student across all subjects.'
+
+      - name: mean_homework_completion
+        description: 'Average homework completion rate of the student.'

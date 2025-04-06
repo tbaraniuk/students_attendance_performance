@@ -1,0 +1,18 @@
+version: 2
+
+seeds:
+  - name: performance
+    config:
+      column_types:
+        Student_ID: varchar(6)
+        Subject: varchar
+        Homework_Completion_%: varchar
+        Exam_Score: integer
+        Teacher_Comments: varchar
+
+    columns:
+      - name: Student_ID
+      - name: Subject
+      - name: Homework_Completion_%
+      - name: Exam_Score
+      - name: Teacher_Comments

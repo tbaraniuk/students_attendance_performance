@@ -1,0 +1,27 @@
+version: 2
+
+models:
+  - name: dim_grade_levels
+    description: |
+      This model joins the grade-level information with the performance data
+      to calculate the mean exam score and homework completion for each grade level.
+    columns:
+      - name: grade_level
+        description: The grade level of the students.
+        tests:
+          - not_null
+
+      - name: students_count
+        description: The number of students in each grade level.
+        tests:
+          - not_null
+
+      - name: mean_exam_score
+        description: The mean exam score for the grade level.
+        tests:
+          - not_null
+
+      - name: mean_homework_completion
+        description: The mean homework completion rate for the grade level.
+        tests:
+          - not_null

@@ -1,0 +1,7 @@
+student_attendance_performance:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: 'student_attendance_performance.duckdb'
+      threads: 24
