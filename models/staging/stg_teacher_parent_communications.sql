@@ -1,6 +1,6 @@
 with
 source as (
-    select * from {{ ref('teacher_parent_communication') }}
+    select * from {{ source('minio_source', 'teacher_parent_communication') }}
 ),
 modified as (
     select

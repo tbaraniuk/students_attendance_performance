@@ -1,0 +1,30 @@
+version: 2
+
+sources:
+  - name: minio_source
+    schema: main
+    tables:
+      - name: homework
+        external:
+          location: 'http://127.0.0.1:9000://student-attendance-performance/homework.csv'
+          format: 'csv'
+
+      - name: performance
+        external:
+          location: 'http://127.0.0.1:9000://student-attendance-performance/performance.csv'
+          format: 'csv'
+
+      - name: attendance
+        external:
+          location: 'http://127.0.0.1:9000://student-attendance-performance/attendance.csv'
+          format: 'csv'
+
+      - name: teacher_parent_communication
+        external:
+          location: 'http://127.0.0.1:9000://student-attendance-performance/teacher_parent_communication.csv'
+          format: 'csv'
+
+  - name: duckdb_source
+    schema: main
+    tables:
+      - name: students

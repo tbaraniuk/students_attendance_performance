@@ -1,6 +1,6 @@
 with
 source as (
-    select * from {{ ref('performance') }}
+    select * from {{ source('minio_source', 'performance') }}
 ),
 modified as (
     select

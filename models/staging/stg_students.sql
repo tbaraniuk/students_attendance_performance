@@ -1,6 +1,6 @@
 with
 source as (
-    select * from {{ ref('students') }}
+    select * from {{ source('duckdb_source', 'students') }}
 ),
 modified as (
     select
